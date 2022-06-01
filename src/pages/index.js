@@ -5,7 +5,7 @@ import Layout from '~/layout/Layout'
 
 const Home = (props) => {
   return (
-    <Layout>
+    <Layout withPadding={false}>
       <HomeGrid {...props} />
     </Layout>
   )

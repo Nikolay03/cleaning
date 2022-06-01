@@ -33,6 +33,8 @@ const themes = (breakpoints) => {
       greyLight: '#e9e9e9'
     },
     background: {
+      gradient: 'linear-gradient(315deg, #b1bfd8 0%, #6782b4 74%)',
+      gradientButton: 'linear-gradient(65deg, #acc920 0%, #2eb19f 56%, #0a9dd8 100%)',
       primary: '#FFFFFF',
       secondary: '#F9F6F3',
       hoverPrimary: '#ECECED',
@@ -76,7 +78,7 @@ const themes = (breakpoints) => {
     },
     fontSize: {
       primary: laptopM ? '14px' : '16px',
-      large: tabletL ? '27px' : laptopM ? '3.9vw' : '50px',
+      large: tabletL ? '27px' : laptopM ? '3.9vw' : '60px',
       biggest: tabletL ? '24px' : laptopM ? '3.3vw' : '36px',
       bigTwo: tabletL ? '24px' : laptopM ? '3.7vw' : '48px',
       medium: tabletL ? '23px' : laptopM ? '26px' : '32px',
@@ -130,6 +132,9 @@ const themes = (breakpoints) => {
       fast: '.1s ease-in-out',
       medium: '.2s ease-in-out',
       long: '.3s ease-in-out'
+    },
+    layoutPadding: {
+      XPadding: tabletL ? '15px' : laptopM ? '28px' : '39px'
     }
   }
 }

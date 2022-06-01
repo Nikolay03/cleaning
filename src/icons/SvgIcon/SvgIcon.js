@@ -15,7 +15,9 @@ const SvgIcon = ({
   ...props
 }) => {
   return (
-    <Svg fill={fill || 'currentColor'} fontSize={fontSize} viewBox={viewBox} height={height} width={width} xmlns={xmlns} {...props}>
+    <Svg
+      fill={fill || 'currentColor'}
+      fontSize={fontSize} viewBox={viewBox} height={height} width={width} xmlns={xmlns} {...props}>
       {children}
     </Svg>
   )

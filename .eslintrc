@@ -47,10 +47,11 @@
     "react/prop-types": "off",
     "no-console": ["warn"],
     "max-len": ["error", {
-      "code": 120,
-      "comments": 120
+      "code": 140,
+      "comments": 140
     }],
     "react/jsx-boolean-value": ["error", "always"],
+    "react/react-in-jsx-scope": "off",
     "react/jsx-curly-brace-presence": [
       "error",
       {

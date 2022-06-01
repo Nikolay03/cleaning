@@ -26,4 +26,8 @@ export default createGlobalStyle`
   .react-cert-carousel-list{
     overflow-y: visible;
   }
+  .activeHeader {
+    box-shadow: 0 2px 15px -1px rgb(9 30 66 / 10%);
+    background-color: #fff;
+  }
 `

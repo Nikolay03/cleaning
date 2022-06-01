@@ -11,7 +11,13 @@ const config = {
   compiler: {
     // ssr and displayName are configured by default
     styledComponents: true
+  },
+  images: {
+    domains: [
+      'stagingapi.agroetp.uz',
+      'alfaapi.agroetp.uz'
+    ]
   }
 }
 
-module.exports = withPlugins([withImages, withBundleAnalyzer], config)
+module.exports = config

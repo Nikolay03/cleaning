@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 import Breadcrumbs from '~/components/Breadcrumbs'
-import Container from '~/components/elements/Container'
+import Container from '~/components/ui/Container'
 
 const ContainerStyled = styled(Container)`
 

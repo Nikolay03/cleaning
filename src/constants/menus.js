@@ -1,11 +1,11 @@
 const menus = [
   {
     url: '/',
-    name: 'BMW'
+    label: 'BMW'
   },
   {
     url: '/',
-    name: 'GM'
+    label: 'GM'
   }
 ]
 

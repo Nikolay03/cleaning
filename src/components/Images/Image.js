@@ -4,7 +4,6 @@ import React from 'react'
 
 const Box = styled.div`
   position: relative;
-  overflow: hidden;
 `
 
 const BoxContent = styled.div`
@@ -15,7 +14,7 @@ const BoxContent = styled.div`
 function Image (props) {
   const { alt, src, children, imageProps, className = '', objectFit, objectPosition, ...restProps } = props
   return (
-    <Box>
+    <Box {...restProps} className={'.imageBox'}>
       {children && (
         <BoxContent>{children}</BoxContent>
       )}
