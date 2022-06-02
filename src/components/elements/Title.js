@@ -4,14 +4,19 @@ import styled from 'styled-components'
 const styles = ({ theme, size }) => {
   switch (size) {
     case 'h1': return { fontSize: theme.fontSize.large, fontWeight: 900, letterSpacing: '-2.3px' }
-    case 'h2': return { fontSize: theme.fontSize.big, fontWeight: 600 }
+    case 'h2': return { fontSize: theme.fontSize.biggest, fontWeight: 600 }
     case 'h3': return { fontSize: theme.fontSize.capital }
     case 'h4': return { fontSize: theme.fontSize.medium }
+    case 'h5': return { fontSize: theme.fontSize.capitalMedium }
     default: return { fontSize: theme.fontSize.capital }
   }
 }
 const TitleStyled = styled.h1`
-  color: ${({ theme, color }) => color === 'dark' ? theme.color.primary : theme.palette.secondary};
+  color: ${({ theme, color }) => color === 'dark'
+    ? theme.color.primary
+    : color === 'white'
+      ? theme.palette.white
+      : theme.palette.secondary};
   line-height: 1.22;
   ${(props) => styles(props)}
 `
@@ -26,9 +31,10 @@ const gradient = (withGradient) => {
     : {}
 }
 
-const Title = ({ as, children, style, withGradient, ...props }) => {
+const Title = ({ as, color, children, style, withGradient, ...props }) => {
   return (
     <TitleStyled
+      color={color}
       size={as}
       as={as}
       style={{ ...style, ...gradient(withGradient) }}
@@ -40,7 +46,6 @@ const Title = ({ as, children, style, withGradient, ...props }) => {
 }
 
 Title.defaultProps = {
-  color: 'dark'
 }
 
 export default Title

@@ -3,6 +3,8 @@ import styled from 'styled-components'
 
 import BannerSection from '~/view/Home/BannerSection/BanerSection'
 import { mediaQueries } from '~/constants/mediaQueries'
+import PartnersSection from '~/view/Home/PartnersSection/HomeСertificates'
+import ServicesSection from '~/view/Home/ServicesSection/ServicesSection'
 
 const Wrapper = styled.div`
   padding: 160px 0px 120px 0px;
@@ -43,9 +45,13 @@ const Wrapper = styled.div`
 
 const HomeGrid = props => {
   return (
-    <Wrapper>
-      <BannerSection />
-    </Wrapper>
+    <>
+      <Wrapper>
+        <BannerSection />
+      </Wrapper>
+      <ServicesSection />
+      <PartnersSection />
+    </>
   )
 }
 

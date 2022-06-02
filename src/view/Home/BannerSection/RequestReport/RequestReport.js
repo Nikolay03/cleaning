@@ -10,14 +10,20 @@ import { mediaQueries } from '~/constants/mediaQueries'
 const defaultButtonProps = {
   height: '68px',
   uppercase: true,
-  fullWidth: true,
+  width: '230px',
   fontSize: '16px'
 }
 
 const Box = styled.div`
-  background: linear-gradient(rgba(0 132 199 / 60%), rgba(0 132 199 / 60%), rgba(0 132 199 / 60%));
+  background: ${({ theme }) => theme.background.gradientButton};
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 20px;
+`
+
+const ButtonWrap = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 
 const RequestBox = styled.div`
@@ -44,7 +50,6 @@ const RequestReport = props => {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    console.warn(values)
   }
   return (
     <RequestBox>
@@ -54,7 +59,7 @@ const RequestReport = props => {
       <form onSubmit={handleSubmit}>
         <Box>
           <FieldWrapper>
-            <Title as={'h3'}>Запросить расчет</Title>
+            <Title as={'h3'} color={'white'}>Запросить расчет</Title>
           </FieldWrapper>
           <FieldWrapper>
             <TextField
@@ -72,12 +77,14 @@ const RequestReport = props => {
               fullWidth={true}
             />
           </FieldWrapper>
-          <Button
-            {...defaultButtonProps}
-            themeType={'secondary'}
-          >
-            Отправить
-          </Button>
+          <ButtonWrap>
+            <Button
+              {...defaultButtonProps}
+              themeType={'secondary'}
+            >
+              Отправить
+            </Button>
+          </ButtonWrap>
         </Box>
       </form>
     </RequestBox>

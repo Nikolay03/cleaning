@@ -24,7 +24,7 @@ const Box = styled.div`
   }
 `
 
-const Wrapper = styled.div`
+const Wrapper = styled.section`
   position: relative;
 `
 const BannerSection = props => {

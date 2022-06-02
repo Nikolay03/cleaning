@@ -1,16 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Facebook, Phone } from 'react-feather'
+import { Phone } from 'react-feather'
 
 import { CONTAINER_SIZE } from '~/components/ui/Container'
 import { mediaQueries } from '~/constants/mediaQueries'
-import Telegram from '~/icons/socials/Telegram'
-import Instagram from '~/icons/socials/Instagram'
 import SocialItems from '~/components/Menu/SocialItems'
 import { phones } from '~/constants/constants'
 
 const Wrapper = styled.div`
-  background-color: rgb(93, 115, 173);
+  background-color: ${({ theme }) => theme.background.secondary};
+  //background-color: rgb(93, 115, 173);
 `
 
 const Box = styled.div`
