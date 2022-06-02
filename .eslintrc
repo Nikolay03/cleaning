@@ -52,6 +52,7 @@
     }],
     "react/jsx-boolean-value": ["error", "always"],
     "react/react-in-jsx-scope": "off",
+    "no-unused-vars": "off",
     "react/jsx-curly-brace-presence": [
       "error",
       {

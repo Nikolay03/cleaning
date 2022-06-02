@@ -5,8 +5,6 @@ import { prop } from 'ramda'
 import Link from 'next/link'
 import { Menu, X } from 'react-feather'
 
-import Button from '../ui/Button'
-
 import hexToRgba from '~/utils/hexToRgba'
 import { LAYOUT_PADDING, phones } from '~/constants/constants'
 import { mediaQueries } from '~/constants/mediaQueries'
