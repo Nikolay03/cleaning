@@ -1,11 +1,13 @@
 {
-  "name": "ugf-web",
+  "name": "cleaning",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://nikolay03.github.io/cleaning/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "deploy": "gh-pages -d build",
     "start": "next start",
     "prod": "next build && next start",
     "analyze": "cross-env ANALYZE=true next build",
@@ -23,6 +25,7 @@
     "@fontsource/source-sans-pro": "^4.3.0",
     "@next/bundle-analyzer": "latest",
     "axios": "^0.21.1",
+    "gh-pages": "^3.2.3",
     "cookie": "^0.4.1",
     "cross-env": "^7.0.3",
     "fast-deep-equal": "^3.1.3",
