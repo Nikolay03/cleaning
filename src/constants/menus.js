@@ -1,11 +1,17 @@
+import * as ROUTES from '~/constants/routes'
+
 const menus = [
   {
-    url: '/',
-    label: 'BMW'
+    url: ROUTES.HOME,
+    label: 'Главная'
   },
   {
-    url: '/',
-    label: 'GM'
+    url: ROUTES.SERVICES,
+    label: 'Услуги'
+  },
+  {
+    url: ROUTES.PARTNERS,
+    label: 'Партнеры'
   }
 ]
 

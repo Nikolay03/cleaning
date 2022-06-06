@@ -2,7 +2,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { prop } from 'ramda'
-import Link from 'next/link'
 import { Menu, X } from 'react-feather'
 
 import hexToRgba from '~/utils/hexToRgba'
@@ -39,10 +38,6 @@ const IconTrigger = styled('div')`
       transition: fill 0ms;
       fill: ${({ theme }) => theme.color.warning};
     }
-  }
-  @media ${mediaQueries.minLaptopM} {
-  }
-  @media ${mediaQueries.laptopM} {
   }
   @media ${mediaQueries.tabletS} {
     height: ${LAYOUT_PADDING}px;
@@ -195,11 +190,11 @@ const MobileMenu = () => {
               const url = prop('url', item)
               const label = prop('label', item)
               return (
-                <Link href={url} key={index}>
+                <a href={`#${url}`} key={index}>
                   <MenuItem>
                     <span>{label}</span>
                   </MenuItem>
-                </Link>
+                </a>
               )
             })}
           </MenuList>

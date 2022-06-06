@@ -5,6 +5,8 @@ import BannerSection from '~/view/Home/BannerSection/BanerSection'
 import { mediaQueries } from '~/constants/mediaQueries'
 import PartnersSection from '~/view/Home/PartnersSection/HomeСertificates'
 import ServicesSection from '~/view/Home/ServicesSection/ServicesSection'
+import * as ROUTES from '~/constants/routes'
+import GetCallBanner from '~/components/GetCallBanner/GetCallBanner'
 
 const Wrapper = styled.div`
   padding: 160px 0px 120px 0px;
@@ -43,13 +45,23 @@ const Wrapper = styled.div`
   }
 `
 
+const GetCall = styled.div`
+  margin-top: 80px;
+  @media ${mediaQueries.laptopS} {
+    margin-top: 50px;
+  }
+`
+
 const HomeGrid = props => {
   return (
     <>
-      <Wrapper>
+      <Wrapper id={ROUTES.HOME}>
         <BannerSection />
       </Wrapper>
       <ServicesSection />
+      <GetCall>
+        <GetCallBanner />
+      </GetCall>
       <PartnersSection />
     </>
   )

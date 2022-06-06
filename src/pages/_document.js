@@ -8,7 +8,8 @@ export default class Document extends NextDocument {
         <Head>
           <meta charSet={'utf-8'} />
           <meta name={'theme-color'} content={'#fff'} />
-          <meta name={'description'} content={'Cars'} />
+          <meta name={'description'} content={'cleaning'} />
+          <title>Shedevr Cleaning - COMMERCIAL & OFFICE CLEANING</title>
         </Head>
         <body>
           <Main />

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 import styled from 'styled-components'
 
 import TextField from '~/components/ui/TextField'
@@ -36,7 +37,10 @@ const RequestBox = styled.div`
       text-align: center;
     }
   }
-
+  @media ${mediaQueries.mobileXL} {
+    min-width: 100%;
+    max-width: 100%;
+  }
 `
 
 const RequestReport = props => {
@@ -53,40 +57,44 @@ const RequestReport = props => {
   }
   return (
     <RequestBox>
-      <FieldWrapper>
-        <Title as={'h1'} withGradient={true}>COMMERCIAL & OFFICE CLEANING</Title>
-      </FieldWrapper>
-      <form onSubmit={handleSubmit}>
-        <Box>
-          <FieldWrapper>
-            <Title as={'h3'} color={'white'}>Запросить расчет</Title>
-          </FieldWrapper>
-          <FieldWrapper>
-            <TextField
-              name={'name'}
-              placeholder={'Введите имя'}
-              onChange={handleChange}
-              fullWidth={true}
-            />
-          </FieldWrapper>
-          <FieldWrapper>
-            <TextField
-              name={'phone'}
-              placeholder={'Номер телефона'}
-              onChange={handleChange}
-              fullWidth={true}
-            />
-          </FieldWrapper>
-          <ButtonWrap>
-            <Button
-              {...defaultButtonProps}
-              themeType={'secondary'}
-            >
-              Отправить
-            </Button>
-          </ButtonWrap>
-        </Box>
-      </form>
+      <AnimationOnScroll animateIn={'animate__fadeInUp'} delay={300} animateOnce={true}>
+        <FieldWrapper>
+          <Title as={'h1'} withGradient={true}>COMMERCIAL & OFFICE CLEANING</Title>
+        </FieldWrapper>
+      </AnimationOnScroll>
+      <AnimationOnScroll animateIn={'animate__fadeInUp'} delay={500} animateOnce={true}>
+        <form onSubmit={handleSubmit}>
+          <Box>
+            <FieldWrapper>
+              <Title as={'h4'} color={'white'}>Запросить расчет</Title>
+            </FieldWrapper>
+            <FieldWrapper>
+              <TextField
+                name={'name'}
+                placeholder={'Введите имя'}
+                onChange={handleChange}
+                fullWidth={true}
+              />
+            </FieldWrapper>
+            <FieldWrapper>
+              <TextField
+                name={'phone'}
+                placeholder={'Номер телефона'}
+                onChange={handleChange}
+                fullWidth={true}
+              />
+            </FieldWrapper>
+            <ButtonWrap>
+              <Button
+                {...defaultButtonProps}
+                themeType={'secondary'}
+              >
+                Отправить
+              </Button>
+            </ButtonWrap>
+          </Box>
+        </form>
+      </AnimationOnScroll>
     </RequestBox>
   )
 }

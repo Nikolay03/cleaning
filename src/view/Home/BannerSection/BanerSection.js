@@ -1,4 +1,5 @@
 import React from 'react'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 import styled from 'styled-components'
 
 import Container from '~/components/ui/Container'
@@ -33,9 +34,11 @@ const BannerSection = props => {
       <Container>
         <SimpleGrid>
           <RequestReport />
-          <Box>
-            <Image objectFit={'contain'} src={'/assets/banner_img.png'} alt={'banner'} style={{ minHeight: '560px' }} />
-          </Box>
+          <AnimationOnScroll animateIn={'animate__fadeInUp'} delay={700} animateOnce={true}>
+            <Box>
+              <Image objectFit={'contain'} src={'/assets/banner_img.png'} alt={'banner'} style={{ minHeight: '560px' }} />
+            </Box>
+          </AnimationOnScroll>
         </SimpleGrid>
       </Container>
     </Wrapper>

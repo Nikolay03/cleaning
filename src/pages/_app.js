@@ -5,6 +5,7 @@ import '@fontsource/source-sans-pro/300.css'
 import '@fontsource/source-sans-pro/400.css'
 import '@fontsource/source-sans-pro/600.css'
 import 'react-multi-carousel/lib/styles.css'
+import 'animate.css/animate.min.css'
 import ProgressBar from '@badrap/bar-of-progress'
 import PropTypes from 'prop-types'
 

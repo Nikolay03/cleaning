@@ -5,8 +5,8 @@ const styles = ({ theme, size }) => {
   switch (size) {
     case 'h1': return { fontSize: theme.fontSize.large, fontWeight: 900, letterSpacing: '-2.3px' }
     case 'h2': return { fontSize: theme.fontSize.biggest, fontWeight: 600 }
-    case 'h3': return { fontSize: theme.fontSize.capital }
-    case 'h4': return { fontSize: theme.fontSize.medium }
+    case 'h3': return { fontSize: theme.fontSize.medium, fontWeight: 600 }
+    case 'h4': return { fontSize: theme.fontSize.capital, fontWeight: 600 }
     case 'h5': return { fontSize: theme.fontSize.capitalMedium }
     default: return { fontSize: theme.fontSize.capital }
   }

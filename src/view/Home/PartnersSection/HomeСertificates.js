@@ -1,11 +1,14 @@
 import React from 'react'
 import Carousel from 'react-multi-carousel'
 import styled from 'styled-components'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 import Container from '~/components/ui/Container'
 import { mediaQueries } from '~/constants/mediaQueries'
 import { Image } from '~/components/Images'
 import Title from '~/components/elements/Title'
+import * as ROUTES from '~/constants/routes'
+import { PARTNERS } from '~/constants/routes'
 
 const StyledCont = styled(Container)`
   padding-top: 90px;
@@ -15,6 +18,10 @@ const StyledCont = styled(Container)`
   }
   @media ${mediaQueries.laptopS} {
     padding-bottom: 90px;
+    padding-bottom: 0px;
+  }
+  @media ${mediaQueries.tabletL} {
+    padding-top: 40px;
   }
 `
 const SliderCont = styled('div')`
@@ -75,26 +82,30 @@ const images = [
 
 const PartnersSection = props => {
   return (
-    <StyledCont as={'section'}>
-      <Title as={'h2'}>Сертификаты</Title>
-      <SliderCont>
-        <Carousel
-          responsive={responsive}
-          swipeable={false}
-          draggable={false}
-          showDots={true}
-          arrows={false}
-          dotListClass={'react-cert-carousel-dot-list'}
-          containerClass={'react-cert-carousel-list'}
-          transitionDuration={500}
-        >
-          {[...images, ...images].map(i => (
-            <SlideCont key={i.alt}>
-              <Image src={i.src} alt={i.alt} style={{ width: '125px', height: '125px' }} objectFit={'contain'} />
-            </SlideCont>
-          ))}
-        </Carousel>
-      </SliderCont>
+    <StyledCont as={'section'} id={ROUTES.PARTNERS}>
+      <AnimationOnScroll animateIn={'animate__fadeInUp'} animateOnce={true}>
+        <Title as={'h2'}>Партнеры</Title>
+      </AnimationOnScroll>
+      <AnimationOnScroll animateIn={'animate__fadeInUp'} animateOnce={true} delay={100}>
+        <SliderCont>
+          <Carousel
+            responsive={responsive}
+            swipeable={false}
+            draggable={false}
+            showDots={true}
+            arrows={false}
+            dotListClass={'react-cert-carousel-dot-list'}
+            containerClass={'react-cert-carousel-list'}
+            transitionDuration={500}
+          >
+            {[...images, ...images].map(i => (
+              <SlideCont key={i.alt}>
+                <Image src={i.src} alt={i.alt} style={{ width: '125px', height: '125px' }} objectFit={'contain'} />
+              </SlideCont>
+            ))}
+          </Carousel>
+        </SliderCont>
+      </AnimationOnScroll>
     </StyledCont>
   )
 }

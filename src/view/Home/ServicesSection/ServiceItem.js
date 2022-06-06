@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import Title from '~/components/elements/Title'
 import { Image } from '~/components/Images'
+import { mediaQueries } from '~/constants/mediaQueries'
 
 const Box = styled.div`
   padding: 35px;
@@ -10,8 +11,11 @@ const Box = styled.div`
   border-radius: 20px;
   display: grid;
   justify-items: center;
-  & h2 {
+  & h3 {
     margin-top: 1em;
+  }
+  @media ${mediaQueries.tabletL} {
+    padding: 20px;
   }
 `
 
@@ -19,7 +23,7 @@ const Texts = styled.div`
   padding-top: 3em;
   border-radius: 20px;
   & p {
-    color: ${props => props.theme.color.secondary};
+    color: ${props => props.theme.color.grey};
   }
 `
 
@@ -39,7 +43,7 @@ const ServiceItem = props => {
   return (
     <Box>
       <Image objectFit={'contain'} src={'/assets/office_type.png'} alt={'banner'} style={{ height: '250px', width: '250px' }} />
-      <Title as={'h2'}>Ofice cleaning</Title>
+      <Title as={'h3'}>Ofice cleaning</Title>
       <Texts>
         {texts.map((i, key) => (
           <Li key={key}>

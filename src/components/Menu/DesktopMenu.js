@@ -2,7 +2,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { prop } from 'ramda'
-import Link from 'next/link'
 
 import { CONTAINER } from '~/constants/constants'
 import { mediaQueries } from '~/constants/mediaQueries'
@@ -67,11 +66,11 @@ const DesktopMenu = () => {
           const url = prop('url', item)
           const label = prop('label', item)
           return (
-            <Link href={url} key={index}>
+            <a href={`#${url}`} key={index}>
               <MenuItem>
                 <span>{label}</span>
               </MenuItem>
-            </Link>
+            </a>
           )
         })}
       </MenuList>

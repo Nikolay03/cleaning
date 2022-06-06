@@ -9,7 +9,7 @@ const defaultButtonProps = {
   fontSize: '16px'
 }
 
-const OrderButton = props => {
+const OrderButton = ({ children, ...props }) => {
   return (
     <a href={'https://t.me/tg'}>
       <Button
@@ -17,7 +17,7 @@ const OrderButton = props => {
         {...props}
         themeType={'gradient'}
       >
-        Заказать услугу
+        {children || 'Заказать услугу'}
       </Button>
     </a>
   )
